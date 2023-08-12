@@ -1,3 +1,36 @@
+function showCitySelection(event) {
+  let cityInput = event.target.value;
+
+  let citySelectedTime = moment().tz(`${cityInput}`).format("hh:mm:ss");
+
+  let citySelectedTimeAmPm = moment().tz(`${cityInput}`).format("A");
+
+  let citySelectedDate = moment().tz(`${cityInput}`).format("MMMM Do YYYY");
+
+  let citySelected = cityInput.replace("_", " ").split("/")[1];
+
+  let showCity = document.querySelector(".cities");
+
+  showCity.innerHTML = `
+    <div class="row">
+      <div class="col-6">
+        <div class="city">
+          ${citySelected}
+        </div>
+        <div class="date">
+          ${citySelectedDate}
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="time">
+          <span>${citySelectedTime}</span>
+          <span>${citySelectedTimeAmPm}</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function functionCities() {
   let berlinDate = document.querySelector("#berlin-date");
   let berlinTime = document.querySelector("#berlin-time");
@@ -26,3 +59,6 @@ function functionCities() {
 
 functionCities();
 setInterval(functionCities, 1000);
+
+let citySelection = document.querySelector("#citySelection");
+citySelection.addEventListener("change", showCitySelection);
