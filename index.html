@@ -16,6 +16,59 @@
       <div class="card">
         <div class="card-body">
           <h1>Wold Clock</h1>
+
+          <select id="citySelection" class="citySelection">
+            <option value="">Select a city ...</option>
+            <option value="current">My current location</option>
+            <option value="Europe/Berlin">Berlin</option>
+            <option value="Europe/London">London</option>
+            <option value="Europe/Paris">Paris</option>
+            <option value="America/New_York">New York</option>
+            <option value="Asia/Tokyo">Tokyo</option>
+            <option value="Australia/Sydney">Sydney</option>
+            <option value="Asia/Seoul">Seoul</option>
+          </select>
+
+          <div class="cities">
+            <div class="row berlin">
+              <div class="col-6">
+                <div class="city" id="berlin-city">Berlin</div>
+                <div class="date" id="berlin-date">August 7th 2023</div>
+              </div>
+              <div class="col-6">
+                <div class="time">
+                  <span id="berlin-time">HH:MM:SS</span>
+                  <span id="berlin-daytime" class="daytime">AM</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row london">
+              <div class="col-6">
+                <div class="city" id="london-city">London</div>
+                <div class="date" id="london-date">August 7th 2023</div>
+              </div>
+              <div class="col-6">
+                <div class="time">
+                  <span id="london-time">HH:MM:SS</span>
+                  <span id="london-daytime" class="daytime">AM</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row tokyo">
+              <div class="col-6">
+                <div class="city" id="tokyo-city">Tokyo</div>
+                <div class="date" id="tokyo-date">August 7th 2023</div>
+              </div>
+              <div class="col-6">
+                <div class="time">
+                  <span id="tokyo-time">HH:MM:SS <small>AM</small></span>
+                  <span id="tokyo-daytime" class="daytime">AM</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
