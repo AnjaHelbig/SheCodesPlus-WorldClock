@@ -9,13 +9,14 @@
       crossorigin="anonymous"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
     <title>World Clock</title>
   </head>
   <body>
     <div class="container">
       <div class="card">
         <div class="card-body">
-          <h1>Wold Clock</h1>
+          <h1>🕔 Wold Clock</h1>
 
           <select id="citySelection" class="citySelection">
             <option value="">Select a city ...</option>
@@ -63,7 +64,7 @@
               </div>
               <div class="col-6">
                 <div class="time">
-                  <span id="tokyo-time">HH:MM:SS <small>AM</small></span>
+                  <span id="tokyo-time">HH:MM:SS</span>
                   <span id="tokyo-daytime" class="daytime">AM</span>
                 </div>
               </div>
@@ -72,15 +73,19 @@
         </div>
       </div>
 
-      <div>
-        Open-source code by Anja Helbig - Check on
-        <img src="src/images/GitHubIcon.png" alt="GitHubIcon" width="40" />
+      <footer>
+        Open-source code by <strong>Anja Helbig</strong> - Check on
+        <img
+          src="src/images/GitHubIcon_transparent.png"
+          alt="GitHubIcon"
+          width="40"
+        />
         <a
           href="https://github.com/AnjaHelbig/SheCodesPlus-WorldClock"
           target="blank"
           >GitHub</a
         >
-      </div>
+      </footer>
     </div>
   </body>
 </html>
