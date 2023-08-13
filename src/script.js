@@ -42,29 +42,51 @@ function showCitySelection(event) {
 }
 
 function functionCities() {
-  let berlinDate = document.querySelector("#berlin-date");
-  let berlinTime = document.querySelector("#berlin-time");
-  let berlinDaytime = document.querySelector("#berlin-daytime");
+  let homeCities = [
+    "Europe/Berlin",
+    "Europe/London",
+    "Asia/Tokyo",
+    "America/New_York",
+  ];
 
-  berlinDate.innerHTML = moment().tz("Europe/Berlin").format("MMMM Do YYYY");
-  berlinTime.innerHTML = moment().tz("Europe/Berlin").format("hh:mm:ss");
-  berlinDaytime.innerHTML = moment().tz("Europe/Berlin").format("A");
+  let citiesHomescreen = document.querySelector("#cities");
 
-  let londonDate = document.querySelector("#london-date");
-  let londonTime = document.querySelector("#london-time");
-  let londonDaytime = document.querySelector("#london-daytime");
+  let showCitiesHomescreen = `<div class="row">`;
 
-  londonDate.innerHTML = moment().tz("Europe/London").format("MMMM Do YYYY");
-  londonTime.innerHTML = moment().tz("Europe/London").format("hh:mm:ss");
-  londonDaytime.innerHTML = moment().tz("Europe/London").format("A");
+  homeCities.forEach(function (city) {
+    let cityTime = moment().tz(`${city}`).format("hh:mm:ss");
 
-  let tokyoDate = document.querySelector("#tokyo-date");
-  let tokyoTime = document.querySelector("#tokyo-time");
-  let tokyoDaytime = document.querySelector("#tokyo-daytime");
+    let cityTimeAmPm = moment().tz(`${city}`).format("A");
 
-  tokyoDate.innerHTML = moment().tz("Asia/Tokyo").format("MMMM Do YYYY");
-  tokyoTime.innerHTML = moment().tz("Asia/Tokyo").format("hh:mm:ss");
-  tokyoDaytime.innerHTML = moment().tz("Asia/Tokyo").format("A");
+    let cityDate = moment().tz(`${city}`).format("MMMM Do YYYY");
+
+    let cityHomescreen = city.replace("_", " ").split("/")[1];
+
+    showCitiesHomescreen =
+      showCitiesHomescreen +
+      `
+    <div class="row">
+      <div class="col-6">
+        <div class="city">
+          ${cityHomescreen}
+        </div>
+        <div class="date">
+          ${cityDate}
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="time">
+          <span>${cityTime}</span>
+          <span>${cityTimeAmPm}</span>
+        </div>
+      </div>
+    </div>
+  `;
+  });
+
+  showCitiesHomescreen = showCitiesHomescreen + `</div>`;
+
+  citiesHomescreen.innerHTML = showCitiesHomescreen;
 }
 
 functionCities();
