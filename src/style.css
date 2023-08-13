@@ -17,7 +17,7 @@ h1 {
   font-weight: bold;
   margin: 10px auto;
   color: #2d4356;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .citySelection {
@@ -30,13 +30,14 @@ h1 {
 }
 
 .cities .row {
-  margin: 10px auto;
+  margin: 0 auto;
   border-bottom: 1px dashed #2d4356;
   padding: 20px 0px;
 }
 
 .row:last-child {
   border: none;
+  margin-bottom: 1px;
 }
 
 .city {

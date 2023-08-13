@@ -1,3 +1,7 @@
+function refreshPage() {
+  window.location.reload();
+}
+
 function updatedCity(cityInput) {
   let citySelectedTime = moment().tz(`${cityInput}`).format("hh:mm:ss");
 
@@ -25,8 +29,12 @@ function updatedCity(cityInput) {
           <span>${citySelectedTimeAmPm}</span>
         </div>
       </div>
-    </div>
-  `;
+     </div> 
+    `;
+
+  let goBack = document.querySelector("#go-back");
+  goBack.innerHTML = "👉 go back to home";
+  goBack.addEventListener = ("click", refreshPage);
 }
 
 function showCitySelection(event) {
