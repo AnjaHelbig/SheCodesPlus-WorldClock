@@ -32,6 +32,10 @@ function updatedCity(cityInput) {
 function showCitySelection(event) {
   let cityInput = event.target.value;
 
+  if (cityInput === "current") {
+    cityInput = moment.tz.guess();
+  }
+
   clearInterval(cityInterval);
   updatedCity(cityInput);
   cityInterval = setInterval(updatedCity, 1000, cityInput);
