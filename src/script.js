@@ -1,3 +1,40 @@
+let cityCollection = [
+  "Europe/London",
+  "Europe/Paris",
+  "Europe/Rome",
+  "America/New_York",
+  "Asia/Tokyo",
+  "Asia/Seoul",
+  "Asia/Dubai",
+  "Australia/Sydney",
+];
+
+// Function for City Selection
+
+function possibleCities() {
+  let possibleCitySelection = document.querySelector("#citySelection");
+
+  let inputSelection = `
+    <option value="">Select a city ...</option>
+    <option value="current">My current location</option>`;
+
+  cityCollection.forEach(function (city) {
+    console.log(city);
+
+    let showPossibleCity = city.replace("_", " ").split("/")[1];
+
+    inputSelection =
+      inputSelection +
+      `
+    <option value=${city}>${showPossibleCity}</option>
+  `;
+  });
+
+  possibleCitySelection.innerHTML = inputSelection;
+}
+
+// Function for single city search
+
 function refreshPage() {
   window.location.reload();
 }
@@ -49,12 +86,16 @@ function showCitySelection(event) {
   cityInterval = setInterval(updatedCity, 1000, cityInput);
 }
 
+// Function for showing cities in base screen
+
 function functionCities() {
   let homeCities = [
     "Europe/Berlin",
     "Europe/London",
-    "Asia/Tokyo",
     "America/New_York",
+    "Asia/Tokyo",
+    "Asia/Dubai",
+    "Australia/Sydney",
   ];
 
   let citiesHomescreen = document.querySelector("#cities");
@@ -96,6 +137,10 @@ function functionCities() {
 
   citiesHomescreen.innerHTML = showCitiesHomescreen;
 }
+
+// JS for calling functions
+
+possibleCities();
 
 functionCities();
 let cityInterval = null;
