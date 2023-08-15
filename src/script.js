@@ -1,4 +1,4 @@
-import {cityCollection} from `./cities.js`;
+import { cityCollection } from "./cities.js";
 
 // Function for City Selection Form
 
