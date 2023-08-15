@@ -53,8 +53,7 @@ function updatedCity(cityInput) {
       </div>
       <div class="col-sm-6">
         <div class="time">
-          <span>${citySelectedTime}</span>
-          <span>${citySelectedTimeAmPm}</span>
+          ${citySelectedTime} ${citySelectedTimeAmPm}
         </div>
       </div>
      </div> 
@@ -116,8 +115,7 @@ function functionCities() {
       </div>
       <div class="col-sm-6">
         <div class="time">
-          <span>${cityTime}</span>
-          <span>${cityTimeAmPm}</span>
+          ${cityTime} ${cityTimeAmPm}
         </div>
       </div>
     </div>
