@@ -43,7 +43,7 @@ function updatedCity(cityInput) {
 
   showCity.innerHTML = `
     <div class="row">
-      <div class="col-6">
+      <div class="col-sm-6">
         <div class="city">
           ${citySelected}
         </div>
@@ -51,7 +51,7 @@ function updatedCity(cityInput) {
           ${citySelectedDate}
         </div>
       </div>
-      <div class="col-6">
+      <div class="col-sm-6">
         <div class="time">
           <span>${citySelectedTime}</span>
           <span>${citySelectedTimeAmPm}</span>
@@ -106,7 +106,7 @@ function functionCities() {
       showCitiesHomescreen +
       `
     <div class="row">
-      <div class="col-6">
+      <div class="col-sm-6">
         <div class="city">
           ${cityHomescreen}
         </div>
@@ -114,7 +114,7 @@ function functionCities() {
           ${cityDate}
         </div>
       </div>
-      <div class="col-6">
+      <div class="col-sm-6">
         <div class="time">
           <span>${cityTime}</span>
           <span>${cityTimeAmPm}</span>
