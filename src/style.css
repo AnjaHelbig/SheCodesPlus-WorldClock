@@ -1,9 +1,16 @@
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    margin: 50px auto;
+  }
+}
+
 body {
   background-color: #e7eaf6;
 }
 
 .container {
-  max-width: 60%;
+  max-width: 40%;
   margin: 50px auto;
 }
 
