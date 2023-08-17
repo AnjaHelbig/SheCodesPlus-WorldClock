@@ -1,7 +1,5 @@
 export const cityCollection = [
   "Africa/Cairo",
-  "Africa/Casablanca",
-  "Africa/Nairobi",
   "America/Buenos_Aires",
   "America/Chicago",
   "America/Los_Angeles",
@@ -13,9 +11,7 @@ export const cityCollection = [
   "Asia/Dubai",
   "Asia/Hong_Kong",
   "Asia/Istanbul",
-  "Asia/Jakarta",
   "Asia/Jerusalem",
-  "Asia/Kabul",
   "Asia/Manila",
   "Asia/Seoul",
   "Asia/Shanghai",
@@ -35,6 +31,4 @@ export const cityCollection = [
   "Europe/Warsaw",
   "US/Arizona",
   "US/Hawaii",
-  "US/Indiana-Starke",
-  "US/Michigan",
 ];
