@@ -1,5 +1,9 @@
 body {
-  background-color: #e7eaf6;
+  background: linear-gradient(
+    109.6deg,
+    rgb(0, 0, 0) 11.2%,
+    rgb(11, 132, 145) 91.1%
+  );
 }
 
 .container {
@@ -55,12 +59,19 @@ h1 {
 
 a {
   text-decoration: none;
-  color: black;
   font-weight: bold;
+  color: white;
+}
+
+.goBack {
+  text-decoration: none;
+  font-weight: bold;
+  color: #2d4356;
 }
 
 footer {
   text-align: center;
+  color: white;
 }
 
 @media (max-width: 768px) {
