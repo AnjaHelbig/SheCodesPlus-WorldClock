@@ -81,10 +81,8 @@ function showCitySelection(event) {
 function functionCities() {
   let homeCities = [
     "Europe/Berlin",
-    "Europe/London",
     "America/New_York",
     "Asia/Tokyo",
-    "Asia/Dubai",
     "Australia/Sydney",
   ];
 
